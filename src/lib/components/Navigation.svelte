@@ -20,21 +20,24 @@
 <!-- Semantic nav element with ARIA label -->
 <nav aria-label="Primary navigation">
     <ul>
-        {#each links as link}
+        {#each links as link, i}
         <li>
             <!--
                 class:active applies the "active" class when
                 the current URL matches this link's href.
                 $page.url.pathname gives us the current path.
+                The first link is active by default if no other links match.
             -->
             <a
                 href={resolve(link.href)}
                 class:active={
-                    // Check if the current path includes the link's href for root and nested routes.
-                    page.url.pathname.includes(link.href) && link.href !== '/' ||
-                    // otherwise, for the root path ('/'), check for exact match
-                    page.url.pathname === link.href}
-            > 
+                    i === 0 
+                        ? !links.some((l, idx) =>
+                            idx !== 0 && page.url.pathname.includes(l.href)
+                        )
+                        : (page.url.pathname.includes(link.href) && link.href !== '/')
+                }
+            >
                 {link.label}
             </a>
         </li>
