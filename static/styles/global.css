@@ -1,0 +1,53 @@
+/* =============================================
+   SRL Website — Global Base Styles
+   Applied to every page via app.html
+   ============================================= */
+
+/* --- Reset & Box Model --- */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;  /* Include padding in width calculations */
+  margin: 0;
+  padding: 0;
+}
+
+/* --- Base Document Styles --- */
+html {
+  font-size: 16px;          /* Base for rem calculations */
+  scroll-behavior: smooth;  /* Smooth anchor scrolling */
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--colour-text);
+  background-color: var(--colour-bg);
+  line-height: 1.6;
+  min-height: 100vh;
+}
+
+/* --- Typography --- */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.2;
+  font-weight: 700;
+  color: var(--colour-text);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
+
+a {
+  color: var(--colour-primary);
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+a:hover { opacity: 0.75; }
+
+/* --- Layout Utility --- */
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 var(--spacing);
+}

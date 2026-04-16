@@ -1,0 +1,43 @@
+/* =============================================
+   SRL Website — Design Tokens
+   All colours, spacing, and typography in one place.
+   To change the look of the entire site, edit here.
+   ============================================= */
+
+:root {
+  /* --- Colour Palette --- */
+  --colour-primary: #2563eb;     /* Main brand blue */
+  --colour-secondary: #7c3aed;   /* Accent purple */
+  --colour-bg: #f9fafb;          /* Page background */
+  --colour-surface: #ffffff;     /* Card/panel background */
+  --colour-text: #111827;        /* Body text */
+  --colour-text-muted: #6b7280;  /* Secondary/muted text */
+  --colour-border: #e5e7eb;      /* Borders and dividers */
+  --colour-success: #10b981;     /* Success states */
+
+  /* --- Spacing Scale --- */
+  --spacing-xs: 0.25rem;   /* 4px  */
+  --spacing-sm: 0.5rem;    /* 8px  */
+  --spacing: 1rem;         /* 16px - base unit */
+  --spacing-lg: 1.5rem;    /* 24px */
+  --spacing-xl: 2rem;      /* 32px */
+  --spacing-2xl: 3rem;     /* 48px */
+
+  /* --- Typography --- */
+  --font-family: 'Inter', system-ui, sans-serif;
+  --font-size-sm: 0.875rem;   /* 14px */
+  --font-size-base: 1rem;     /* 16px */
+  --font-size-lg: 1.125rem;   /* 18px */
+  --font-size-xl: 1.5rem;     /* 24px */
+  --font-size-2xl: 2rem;      /* 32px */
+  --font-size-3xl: 2.5rem;    /* 40px */
+
+  /* --- Layout --- */
+  --max-width: 1200px;
+  --border-radius: 0.5rem;
+  --border-radius-lg: 1rem;
+
+  /* --- Shadows --- */
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.08);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
